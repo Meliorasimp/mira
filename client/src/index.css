@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --primary-text-color: #d6d6d6;
+  --secondary-text-color: #c2c2c2;
+  --tertiary-text-color: #a6a6a6;
+  --primary-background-color: #010020;
+  --secondary-background-color: #00043d;
+  --light-mode-background-color: #ffffff;
+  --light-mode-text-color: #000000;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--primary-background-color);
+}
+
+.navbar-bg-color {
+  background-color: var(--primary-background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-text-color);
+}
+
+p {
+  color: var(--secondary-text-color);
+}
+
+.app.dark {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+.app.light {
+  background-color: var(--light-mode-background-color);
+}
+.app.light p {
+  color: var(--light-mode-text-color);
+}
+
+.app.light h1,
+.app.light h2,
+.app.light h3,
+.app.light h4,
+.app.light h5,
+.app.light h6 {
+  color: var(--light-mode-text-color);
+}
+
+.app.light button {
+  background-color: var(--light-mode-background-color);
+  color: var(--light-mode-text-color);
+}
+
+.app {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
