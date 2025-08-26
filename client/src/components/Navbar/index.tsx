@@ -4,8 +4,10 @@ import Heading from "../Text/Heading";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const theme = useSelector(
     (state: RootState) => state.interaction.isLightMode
@@ -18,16 +20,19 @@ const Navbar = () => {
           label="Home"
           level={1}
           className="text-lg mr-auto hover:underline cursor-pointer"
+          onClick={() => navigate("/")}
         />
         <Heading
           label="About"
           level={1}
           className="text-lg mr-auto hover:underline cursor-pointer"
+          onClick={() => navigate("/about")}
         />
         <Heading
-          label="Services"
+          label="Skills"
           level={1}
           className="text-lg mr-auto hover:underline cursor-pointer"
+          onClick={() => navigate("/services")}
         />
         <Heading
           label="Contact"
