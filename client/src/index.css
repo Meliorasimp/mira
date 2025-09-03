@@ -10,6 +10,9 @@
   --light-mode-background-color: #ffffff;
   --light-mode-text-color: #000000;
   font-family: "Inter", sans-serif;
+
+  --project-card-background-color: #220077;
+  --project-card-text-color: #ffffff;
 }
 
 body {
@@ -61,4 +64,13 @@ p {
 
 .app {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.projectcard {
+  background-color: var(--project-card-background-color);
+  color: var(--project-card-text-color);
+}
+
+.circle {
+  border-radius: 100%;
 }

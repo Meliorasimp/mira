@@ -43,6 +43,7 @@ const Navbar = () => {
           label="Projects"
           level={1}
           className="text-lg mr-auto hover:underline cursor-pointer"
+          onClick={() => navigate("/projects")}
         />
         <div className="flex flex-row gap-4 items-center">
           {theme ? (

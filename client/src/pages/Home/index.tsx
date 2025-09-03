@@ -6,6 +6,7 @@ import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 import "../../index.css";
 import profilepic from "../../assets/profilepic-removebg.png";
+
 const Home = () => {
   const profile = profilepic;
   const theme = useSelector((state: RootState) =>
@@ -14,27 +15,15 @@ const Home = () => {
   return (
     <div className={`pl-20 pr-20 h-screen app ${theme}`}>
       <Navbar />
-      <div className="h-3/4 flex flex-row">
-        <div className="w-1/2 flex flex-col items-left justify-center text-white text-4xl font-bold pr-5">
-          <Heading
-            label="Hi, I'm Meinard Legashki Limlengco"
-            level={1}
-            className="font-serif"
-          />
+      <div className="h-3/4 flex flex-row items-center justify-center ">
+        <div className="w-1/2 flex flex-col items-left justify-center text-white text-5xl fontlight pr-5">
+          <Heading label="Hello, I'm Meinard Legashki Limlengco" level={1} />
           <Paragraph
-            label="Fullstack Developer"
+            label="Fullstack Developer based in the Philippines with a passion for creating dynamic and responsive web applications."
             variant="primary"
-            className=" pb-5"
+            className=" pb-5 text-xl mt-3"
           />
-          <Paragraph
-            label="I'm a software engineer with a passion for building web applications. 
-            I specialize in the MERN stack (MongoDB, Express, React, Node.js) and enjoy turning ideas into functional, 
-            user-friendly solutions. I excel at creating scalable, maintainable, and responsive web applications, and I’m 
-            constantly exploring modern technologies and best practices to improve performance and user experience.
-            "
-            variant="secondary"
-            className="pb-5 leading-relaxed"
-          />
+
           <div className="flex flex-row gap-x-5">
             <Button
               label="Contact Me"
@@ -48,11 +37,11 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="w-1/2 rounded-2xl overflow-hidden">
+        <div className="w-2/6 h-5/6 overflow-hidden rounded-full mx-auto shadow-[0_4px_30px_-4px_rgba(255,255,255,0.3)] border">
           <img
             src={profile}
-            alt=""
-            className=" object-contain m-auto h-full max-w-4xl"
+            alt="Profile picture of [Your Name]"
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
