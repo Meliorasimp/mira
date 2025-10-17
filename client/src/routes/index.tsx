@@ -1,9 +1,8 @@
 import { RouteObject } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Services from "../pages/Services";
 import Projects from "../pages/Projects";
-
+import Contacts from "../pages/Contacts";
 const routes: RouteObject[] = [
   {
     path: "/",
@@ -14,12 +13,12 @@ const routes: RouteObject[] = [
     element: <About />,
   },
   {
-    path: "/services",
-    element: <Services />,
-  },
-  {
     path: "/projects",
     element: <Projects />,
+  },
+  {
+    path: "/contacts",
+    element: <Contacts />,
   },
 ];
 

@@ -4,47 +4,29 @@ import Heading from "../Text/Heading";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const theme = useSelector(
     (state: RootState) => state.interaction.isLightMode
   );
+
+  const NavbarLinks = ["Home", "About", "Contact", "Projects"];
+  const NavbarRoutes = ["/", "/about", "/contacts", "/projects"];
   return (
-    <div className="h-16 text-white flex flex-row items-center">
-      <Heading label="Mira" level={1} className="text-lg mr-auto" />
-      <div className="flex flex-row gap-10">
-        <Heading
-          label="Home"
-          level={1}
-          className="text-lg mr-auto hover:underline cursor-pointer"
-          onClick={() => navigate("/")}
-        />
-        <Heading
-          label="About"
-          level={1}
-          className="text-lg mr-auto hover:underline cursor-pointer"
-          onClick={() => navigate("/about")}
-        />
-        <Heading
-          label="Skills"
-          level={1}
-          className="text-lg mr-auto hover:underline cursor-pointer"
-          onClick={() => navigate("/services")}
-        />
-        <Heading
-          label="Contact"
-          level={1}
-          className="text-lg mr-auto hover:underline cursor-pointer"
-        />
-        <Heading
-          label="Projects"
-          level={1}
-          className="text-lg mr-auto hover:underline cursor-pointer"
-          onClick={() => navigate("/projects")}
-        />
+    <nav className="h-16 text-white flex flex-row items-center">
+      <Heading label="lmx" level={1} className="text-lg mr-auto" />
+      <div
+        className={`flex flex-row gap-10 ${
+          theme ? "text-black" : "text-white"
+        }`}
+      >
+        {NavbarLinks.map((l, index) => (
+          <div key={index}>
+            <Link to={NavbarRoutes[index]}>{l}</Link>
+          </div>
+        ))}
         <div className="flex flex-row gap-4 items-center">
           {theme ? (
             <FaMoon
@@ -68,7 +50,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
