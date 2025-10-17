@@ -21,13 +21,14 @@ const About = () => {
     { name: "Node.js/Express", level: 85, category: "Backend" },
     { name: "MongoDB", level: 80, category: "Database" },
     { name: "Tailwind CSS", level: 95, category: "Styling" },
-    { name: "Git/GitHub", level: 88, category: "Tools" },
+    { name: "Git/GitHub", level: 100, category: "Tools" },
     { name: "REST APIs", level: 87, category: "Integration" },
     { name: "Docker", level: 30, category: "DevOps" },
     { name: "Jest", level: 40, category: "Testing" },
     { name: "Redux", level: 90, category: "State Management" },
     { name: "ASP .NET Core", level: 10, category: "Backend" },
     { name: "WebSockets", level: 30, category: "Real-time" },
+    { name: "Figma", level: 50, category: "Design & Prototyping" },
   ];
 
   const experiences = [
@@ -166,7 +167,7 @@ const About = () => {
                                   : "text-blue-600"
                               }`}
                             >
-                              50,000+
+                              10,000+
                             </span>
                           </div>
                           <div className="flex justify-between items-center">

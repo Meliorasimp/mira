@@ -112,7 +112,7 @@ const Home = () => {
                       theme === "dark" ? "text-purple-400" : "text-purple-600"
                     }`}
                   >
-                    3+
+                    0+
                   </div>
                   <div className="text-sm opacity-70">Years Experience</div>
                 </div>
@@ -122,7 +122,7 @@ const Home = () => {
                       theme === "dark" ? "text-blue-400" : "text-blue-600"
                     }`}
                   >
-                    20+
+                    2+
                   </div>
                   <div className="text-sm opacity-70">Projects Built</div>
                 </div>
@@ -233,7 +233,7 @@ const Home = () => {
                 label="Start a Project"
                 onClick={() =>
                   window.open(
-                    "mailto:your.email@example.com?subject=Project Inquiry",
+                    "mailto:meliorasimp@gmail.com?subject=Project Inquiry",
                     "_blank"
                   )
                 }
