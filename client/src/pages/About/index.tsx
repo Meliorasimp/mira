@@ -6,6 +6,21 @@ import Heading from "../../components/Text/Heading";
 import Paragraph from "../../components/Text/Paragraph";
 import "../../index.css";
 
+const skills = [
+  { name: "React/TypeScript", level: 90, category: "Frontend" },
+  { name: "Node.js/Express", level: 85, category: "Backend" },
+  { name: "MongoDB", level: 80, category: "Database" },
+  { name: "Tailwind CSS", level: 95, category: "Styling" },
+  { name: "Git/GitHub", level: 100, category: "Tools" },
+  { name: "REST APIs", level: 87, category: "Integration" },
+  { name: "Docker", level: 30, category: "DevOps" },
+  { name: "Jest", level: 40, category: "Testing" },
+  { name: "Redux", level: 90, category: "State Management" },
+  { name: "ASP .NET Core", level: 10, category: "Backend" },
+  { name: "WebSockets", level: 30, category: "Real-time" },
+  { name: "Figma", level: 50, category: "Design & Prototyping" },
+];
+
 const About = () => {
   const theme = useSelector((state: RootState) =>
     state.interaction.isLightMode ? "light" : "dark"
@@ -15,21 +30,6 @@ const About = () => {
   const [skillProgress, setSkillProgress] = useState<{ [key: string]: number }>(
     {}
   );
-
-  const skills = [
-    { name: "React/TypeScript", level: 90, category: "Frontend" },
-    { name: "Node.js/Express", level: 85, category: "Backend" },
-    { name: "MongoDB", level: 80, category: "Database" },
-    { name: "Tailwind CSS", level: 95, category: "Styling" },
-    { name: "Git/GitHub", level: 100, category: "Tools" },
-    { name: "REST APIs", level: 87, category: "Integration" },
-    { name: "Docker", level: 30, category: "DevOps" },
-    { name: "Jest", level: 40, category: "Testing" },
-    { name: "Redux", level: 90, category: "State Management" },
-    { name: "ASP .NET Core", level: 10, category: "Backend" },
-    { name: "WebSockets", level: 30, category: "Real-time" },
-    { name: "Figma", level: 50, category: "Design & Prototyping" },
-  ];
 
   const experiences = [
     {
