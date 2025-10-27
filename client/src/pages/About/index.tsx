@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 import Heading from "../../components/Text/Heading";
 import Paragraph from "../../components/Text/Paragraph";
+import { useNavigate } from "react-router-dom";
 import "../../index.css";
 
 const skills = [
@@ -22,6 +23,7 @@ const skills = [
 ];
 
 const About = () => {
+  const navigate = useNavigate();
   const theme = useSelector((state: RootState) =>
     state.interaction.isLightMode ? "light" : "dark"
   );
@@ -423,7 +425,7 @@ const About = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={() => (window.location.href = "/")}
+                  onClick={() => navigate("/projects")}
                   className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-medium text-lg"
                 >
                   View My Work

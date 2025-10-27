@@ -47,7 +47,7 @@ const Projects = () => {
       ],
       category: "Full Stack",
       demoUrl: "https://ai-powered-quanta.vercel.app",
-      githubUrl: "https://github.com/yourusername/finance-tracker",
+      githubUrl: "https://github.com/Meliorasimp/AI-Powered-Quanta",
       featured: true,
     },
   ];
@@ -88,14 +88,12 @@ const Projects = () => {
           alt={`${project.name} screenshot`}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
           onError={(e) => {
-            // Fallback to gradient if image fails to load
             const target = e.target as HTMLImageElement;
             target.style.display = "none";
             const fallback = target.nextElementSibling as HTMLDivElement;
             if (fallback) fallback.style.display = "flex";
           }}
         />
-        {/* Fallback gradient (hidden by default) */}
         <div
           className={`w-full h-full bg-gradient-to-br ${
             index % 3 === 0

@@ -5,7 +5,7 @@ import Paragraph from "../../components/Text/Paragraph";
 import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import Gehlee from "../../assets/gy.webp";
+import image from "../../assets/image.jpg";
 import "../../index.css";
 
 const Home = () => {
@@ -186,7 +186,7 @@ const Home = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-purple-400/30 to-blue-400/30 rounded-full blur-lg"></div>
                 <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-indigo-500/20 backdrop-blur-sm border border-white/10 overflow-hidden">
                   <img
-                    src={Gehlee}
+                    src={image}
                     alt="Meinard Legashki Limlengco - Fullstack Developer"
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -229,16 +229,6 @@ const Home = () => {
               className="text-lg md:text-xl mb-8 max-w-2xl mx-auto"
             />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                label="Start a Project"
-                onClick={() =>
-                  window.open(
-                    "mailto:meliorasimp@gmail.com?subject=Project Inquiry",
-                    "_blank"
-                  )
-                }
-                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-medium text-lg"
-              />
               <Button
                 label="View My Work"
                 onClick={() => (window.location.href = "/projects")}

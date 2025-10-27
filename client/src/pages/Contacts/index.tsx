@@ -25,18 +25,6 @@ const Contacts = () => {
 
   const contactMethods: ContactMethod[] = [
     {
-      icon: "📧",
-      title: "Email",
-      subtitle: "Send me a direct message",
-      value: "meliorasimp@gmail.com",
-      action: () =>
-        window.open(
-          "mailto:meliorasimp@gmail.com?subject=Hello from your portfolio",
-          "_blank"
-        ),
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
       icon: "🐙",
       title: "GitHub",
       subtitle: "Check out my code",
