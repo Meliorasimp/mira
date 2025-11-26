@@ -44,7 +44,7 @@ const Home = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "C:UsersmelioDownloadsLimlengcoMeinardResume.pdf";
+    link.href = "/LimlengcoMeinardResume.pdf";
     link.download = "LimlengcoMeinardResume.pdf";
     document.body.appendChild(link);
     link.click();
