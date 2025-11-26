@@ -6,7 +6,8 @@ import Button from "../../components/Button";
 import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 import "../../index.css";
-import quantaxy from "../../assets/financetrackerimage.jpg";
+import quantaxy from "../../assets/quantxy.png";
+import quantify from "../../assets/equantifyxyz.png";
 
 interface Project {
   id: number;
@@ -48,6 +49,25 @@ const Projects = () => {
       category: "Full Stack",
       demoUrl: "https://ai-powered-quanta.vercel.app",
       githubUrl: "https://github.com/Meliorasimp/AI-Powered-Quanta",
+      featured: true,
+    },
+    {
+      id: 2,
+      name: "Enterprise Grade Inventory Management System",
+      description: "A robust inventory management solution for businesses",
+      longDescription:
+        "A scalable inventory management system designed for enterprises, featuring real-time stock tracking, order management, and supplier integration. Built with a focus on security and performance. (Ongoing development)",
+      image: quantify,
+      technologies: [
+        "React",
+        "TypeScript",
+        "GraphQL",
+        "ASP.NET Core",
+        "PostgreSQL",
+      ],
+      category: "Full Stack",
+      demoUrl: "https://egquantify.vercel.app",
+      githubUrl: "https://github.com/Meliorasimp/Quantify-backend",
       featured: true,
     },
   ];

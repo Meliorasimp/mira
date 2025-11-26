@@ -5,7 +5,7 @@ import Paragraph from "../../components/Text/Paragraph";
 import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import image from "../../assets/image.jpg";
+import image from "../../assets/dp.jpg";
 import "../../index.css";
 
 const Home = () => {
@@ -16,7 +16,18 @@ const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentTech, setCurrentTech] = useState(0);
 
-  const techStack = ["React", "Node.js", "TypeScript", "MongoDB", "Express"];
+  const techStack = [
+    "React",
+    "Node.js",
+    "TypeScript",
+    "MongoDB",
+    "Express",
+    "GraphQL",
+    "Docker",
+    "C#",
+    "ASP.NET",
+    "PostgreSQL",
+  ];
 
   useEffect(() => {
     setIsLoaded(true);
@@ -33,8 +44,8 @@ const Home = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/path-to-your-cv.pdf";
-    link.download = "Meinard_Limlengco_CV.pdf";
+    link.href = "C:UsersmelioDownloadsLimlengcoMeinardResume.pdf";
+    link.download = "LimlengcoMeinardResume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -43,7 +54,7 @@ const Home = () => {
   return (
     <div className={`min-h-screen app ${theme} relative overflow-hidden`}>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-blue-900/10 to-indigo-900/10"></div>
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden w-1/2">
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
@@ -62,7 +73,7 @@ const Home = () => {
       <div className="relative z-10">
         <div className="px-6 md:px-20">
           <Navbar />
-          <main className="min-h-[85vh] flex flex-col lg:flex-row items-center justify-between py-12 gap-12">
+          <main className="min-h-[85vh] w-[80vw] flex flex-col lg:flex-row items-center justify-between mx-auto py-12 gap-12">
             <div
               className={`flex-1 max-w-2xl transform transition-all duration-1000 ${
                 isLoaded
@@ -161,7 +172,18 @@ const Home = () => {
                 >
                   Tech Stack:
                 </span>
-                {["React", "Node.js", "TypeScript", "MongoDB"].map((tech) => (
+                {[
+                  "React",
+                  "Node.js",
+                  "TypeScript",
+                  "MongoDB",
+                  "Express",
+                  "GraphQL",
+                  "Docker",
+                  "C#",
+                  "ASP.NET",
+                  "PostgreSQL",
+                ].map((tech) => (
                   <span
                     key={tech}
                     className={`px-3 py-1 rounded-full text-xs font-medium border ${
